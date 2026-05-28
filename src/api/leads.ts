@@ -2,7 +2,7 @@ import { client } from './client'
 import axios from 'axios'
 import type { ApiResponse, Lead, LeadStatus, LeadStats } from '../types'
 
-const PUBLIC_BASE = 'http://localhost:3000/api'
+const PUBLIC_BASE = 'https://imovelweb.onrender.com/api'
 
 interface LeadsPage {
   leads: Lead[]

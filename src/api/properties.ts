@@ -2,7 +2,7 @@ import axios from 'axios'
 import { client } from './client'
 import type { ApiResponse, Property, PropertyStatus, PropertyStats, PropertyWithCompany, TourPhoto, PriceHistoryEntry, Agency } from '../types'
 
-const PUBLIC_BASE = 'http://localhost:3000/api'
+const PUBLIC_BASE = 'https://imovelweb.onrender.com/api'
 
 export const agencyApi = {
   get: async (companyId: string): Promise<ApiResponse<Agency>> => {

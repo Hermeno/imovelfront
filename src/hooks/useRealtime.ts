@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useNotifications } from '../contexts/NotificationContext'
 
-const SSE_URL = 'http://localhost:3000/api/events'
+const SSE_URL = 'https://imovelweb.onrender.com/api/events'
 const RECONNECT_DELAY = 5000
 
 export function useRealtime(token: string | null) {
