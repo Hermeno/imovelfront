@@ -41,7 +41,7 @@ export function AddressAutocomplete({ onSelect, placeholder = 'Search address…
   const [results, setResults] = useState<GeoResult[]>([])
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
-  const debounce = useRef<ReturnType<typeof setTimeout>>()
+  const debounce = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const wrapRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

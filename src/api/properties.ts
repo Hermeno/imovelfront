@@ -21,6 +21,25 @@ export const publicPropertiesApi = {
     const res = await axios.get(`${PUBLIC_BASE}/public/properties/${id}`)
     return res.data
   },
+
+  getPriceHistory: async (id: string): Promise<ApiResponse<PriceHistoryEntry[]>> => {
+    const res = await axios.get(`${PUBLIC_BASE}/public/properties/${id}/price-history`)
+    return res.data
+  },
+
+  getChangelog: async (id: string): Promise<ApiResponse<{ id: string; field: string; oldValue: string | null; newValue: string | null; createdAt: string }[]>> => {
+    const res = await axios.get(`${PUBLIC_BASE}/public/properties/${id}/changelog`)
+    return res.data
+  },
+
+  getTourPhotos: async (id: string): Promise<ApiResponse<TourPhoto[]>> => {
+    const res = await axios.get(`${PUBLIC_BASE}/public/properties/${id}/tour-photos`)
+    return res.data
+  },
+
+  trackView: async (id: string, sessionId: string, referrer?: string, device?: string): Promise<void> => {
+    await axios.post(`${PUBLIC_BASE}/public/properties/${id}/view`, { sessionId, referrer, device }).catch(() => {})
+  },
 }
 
 export const propertiesApi = {

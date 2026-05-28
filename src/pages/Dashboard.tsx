@@ -1,10 +1,10 @@
 import {
   Box, Flex, Text, Button, Spinner, SimpleGrid, Table, Thead, Tbody, Tr, Th, Td,
-  useToast, useDisclosure, Select, Badge, Menu, MenuButton, MenuList, MenuItem, IconButton,
+  useToast, useDisclosure, Select,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar, NAVBAR_HEIGHT } from '../components/Navbar'
+import { Navbar } from '../components/Navbar'
 import { AddPropertyModal } from '../components/AddPropertyModal'
 import { EditPropertyModal } from '../components/EditPropertyModal'
 import { propertiesApi } from '../api/properties'
@@ -13,9 +13,6 @@ import { useNotifications } from '../contexts/NotificationContext'
 import { exportPropertiesToCSV } from '../utils/export'
 import type { Property, PropertyStatus } from '../types'
 
-const STATUS_COLOR: Record<PropertyStatus, string> = {
-  AVAILABLE: '#2E9B6A', NEGOTIATING: '#E8A838', SOLD: '#D94F4F',
-}
 
 function StatCard({ value, label, accent }: { value: number | string; label: string; accent: string }) {
   return (

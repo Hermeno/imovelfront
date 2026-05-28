@@ -1,5 +1,5 @@
 import {
-  Box, Flex, Text, Badge, Spinner, Avatar, Button, Select,
+  Box, Flex, Text, Badge, Spinner, Avatar, Select,
   useDisclosure, useToast, Tabs, TabList, Tab, TabPanels, TabPanel,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'

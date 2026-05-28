@@ -4,7 +4,7 @@ import {
   FormControl, FormLabel, Input, Textarea, VStack, NumberInput, NumberInputField, Select,
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { publicPropertiesApi } from '../api/properties'
 import { leadsApi } from '../api/leads'
 import { alertsApi } from '../api/alerts'
@@ -45,8 +45,7 @@ export function PropertyPage() {
   const { isOpen: isContactOpen, onOpen: openContact, onClose: closeContact } = useDisclosure()
   const { isOpen: isVisitOpen, onOpen: openVisit, onClose: closeVisit } = useDisclosure()
   const toast = useToast()
-  const navigate = useNavigate()
-  const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', whatsapp: '', message: '' })
+const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', whatsapp: '', message: '' })
   const [priceHistory, setPriceHistory] = useState<PriceHistoryEntry[]>([])
   const [changelog, setChangelog] = useState<{ id: string; field: string; oldValue: string | null; newValue: string | null; createdAt: string }[]>([])
   const [tourPhotos, setTourPhotos] = useState<TourPhoto[]>([])

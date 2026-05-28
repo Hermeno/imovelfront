@@ -3,7 +3,6 @@ import {
   Box, Flex, Text, Button, Badge, Divider,
 } from '@chakra-ui/react'
 import { useComparison } from '../contexts/ComparisonContext'
-import type { Property } from '../types'
 
 function fmtPrice(n: number | null) {
   if (!n) return '—'
@@ -36,8 +35,6 @@ interface Props { isOpen: boolean; onClose: () => void }
 
 export function ComparisonDrawer({ isOpen, onClose }: Props) {
   const { items, remove, clear } = useComparison()
-
-  const placeholders = [...items, ...Array(Math.max(0, 2 - items.length)).fill(null)] as (Property | null)[]
 
   return (
     <Drawer isOpen={isOpen} placement="bottom" onClose={onClose} size="md">

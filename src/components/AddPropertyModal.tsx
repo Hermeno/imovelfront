@@ -1,7 +1,7 @@
 import {
   Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, ModalCloseButton,
   Button, FormControl, FormLabel, FormErrorMessage, Input, Textarea, Select,
-  VStack, Text, Box, SimpleGrid, Divider, useToast,
+  VStack, Text, SimpleGrid, Divider, useToast,
 } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 import { propertiesApi } from '../api/properties'

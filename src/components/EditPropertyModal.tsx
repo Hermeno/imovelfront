@@ -1,6 +1,6 @@
 import {
   Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, ModalCloseButton,
-  Button, FormControl, FormLabel, Input, Textarea, Select, VStack, Text, Box,
+  Button, FormControl, FormLabel, Input, Textarea, Select, VStack, Text,
   SimpleGrid, Tabs, TabList, Tab, TabPanels, TabPanel, Divider, useToast,
 } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'

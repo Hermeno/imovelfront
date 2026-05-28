@@ -2,7 +2,7 @@ import {
   Box, Flex, Text, Button, Badge, VStack, useToast,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../contexts/AuthContext'
+
 
 const PLANS = [
   {
@@ -67,7 +67,7 @@ const PLANS = [
 ]
 
 export function Plans() {
-  const { company } = useAuth()
+
   const toast = useToast()
 
   function handleUpgrade(planId: string) {

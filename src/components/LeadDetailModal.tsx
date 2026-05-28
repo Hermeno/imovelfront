@@ -44,25 +44,25 @@ export function LeadDetailModal({ lead, isOpen, onClose, onStatusChange }: Props
   const cfg = STATUS_CFG[lead.status]
 
   async function markViewed() {
-    if (!lead.viewed) {
-      await leadsApi.update(lead.id, { viewed: true }).catch(() => {})
+    if (!lead!.viewed) {
+      await leadsApi.update(lead!.id, { viewed: true }).catch(() => {})
     }
   }
 
   function openWhatsApp() {
-    const num = lead.whatsapp?.replace(/\D/g, '')
-    if (num) window.open(`https://wa.me/${num}?text=${encodeURIComponent(`Hi ${lead.interestedName}! Following up on your interest in: ${lead.propertyTitle || ''}`)  }`, '_blank')
+    const num = lead!.whatsapp?.replace(/\D/g, '')
+    if (num) window.open(`https://wa.me/${num}?text=${encodeURIComponent(`Hi ${lead!.interestedName}! Following up on your interest in: ${lead!.propertyTitle || ''}`)}`, '_blank')
   }
 
   function callPhone() {
-    if (lead.phone) window.location.href = `tel:${lead.phone}`
+    if (lead!.phone) window.location.href = `tel:${lead!.phone}`
   }
 
   async function saveNotes() {
     setSavingNotes(true)
     await new Promise((r) => setTimeout(r, 400))
     setSavingNotes(false)
-    const key = `ulmap_lead_notes_${lead.id}`
+    const key = `ulmap_lead_notes_${lead!.id}`
     localStorage.setItem(key, notes)
     toast({ title: 'Notes saved', status: 'success', duration: 2000 })
   }

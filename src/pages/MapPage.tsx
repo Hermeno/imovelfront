@@ -136,7 +136,7 @@ export function MapPage() {
   const [addMode, setAddMode] = useState(false)
   const [userPos, setUserPos] = useState<[number, number] | null>(null)
   const [locating, setLocating] = useState(false)
-  const [editingProperty, setEditingProperty] = useState<Property | null>(null)
+  const [editingProperty] = useState<Property | null>(null)
   const addModal = useDisclosure()
   const detailModal = useDisclosure()
   const editModal = useDisclosure()

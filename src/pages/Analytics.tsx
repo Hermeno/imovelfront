@@ -6,7 +6,7 @@ import { BarChart } from '../components/charts/BarChart'
 import { DonutChart } from '../components/charts/DonutChart'
 import { propertiesApi } from '../api/properties'
 import { leadsApi } from '../api/leads'
-import { exportPropertiesToCSV } from '../utils/export'
+
 import type { PropertyStats, LeadStats } from '../types'
 
 const STATUS_COLOR: Record<string, string> = {

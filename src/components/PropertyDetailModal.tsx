@@ -53,7 +53,7 @@ export function PropertyDetailModal({ property, isOpen, onClose, onUpdated, read
   const [contactLoading, setContactLoading] = useState(false)
   const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', whatsapp: '', message: '' })
   const { isFavorite, toggle: toggleFav } = useFavorites()
-  const { toggle: toggleCompare, isSelected, canAdd } = useComparison()
+  useComparison()
   const visitModal = useDisclosure()
   const contactModal = useDisclosure()
 
@@ -66,7 +66,6 @@ export function PropertyDetailModal({ property, isOpen, onClose, onUpdated, read
   const cfg = STATUS_CFG[status]
   const images = property.imageUrls ?? []
   const fav = isFavorite(property.id)
-  const inComp = isSelected(property.id)
   const companyName = readOnly ? (property as PropertyWithCompany).company?.name : authCompany?.name
 
   async function handleStatusChange(newStatus: PropertyStatus) {

@@ -1,5 +1,5 @@
 import {
-  Box, Flex, Text, Button, Spinner, Input, useDisclosure, IconButton, Badge,
+  Box, Flex, Text, Button, Spinner, Input, useDisclosure, IconButton,
 } from '@chakra-ui/react'
 import { useEffect, useState, useRef } from 'react'
 import { MapContainer, TileLayer, Marker, Circle, useMap, Tooltip as LeafletTooltip } from 'react-leaflet'
